@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.i.ua/Tariff"
+        xmlns:tns="http://www.i.ua/Tariff">
+    <element name="Tariff">
+        <complexType>
+            <sequence>
+                <element name="Tarif1" type="tns:typeTarif" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="typeTarif">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="operator" type="string"/>
+            <element name="payrol" type="tns:intSimple" maxOccurs="unbounded"/>
+            <element name="callPrices" type="tns:typeCallPrices" maxOccurs="unbounded"/>
+            <element name="sms" type="tns:doubleSmsPrices" maxOccurs="unbounded"/>
+            <element name="parameters" type="tns:typeParameters" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="typeCallPrices">
+        <sequence>
+            <element name="inside" type="tns:intSimple" maxOccurs="unbounded"/>
+            <element name="outside" type="tns:intSimple" maxOccurs="unbounded"/>
+            <element name="stationarNumber" type="tns:intSimple" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="typeParameters">
+        <sequence>
+            <element name="favouriteNumbers" type="tns:intSimple"/>
+            <element name="tarificationType" type="tns:tarifPattern"/>
+            <element name="connectionPrice" type="tns:intSimple"/>
+        </sequence>
+    </complexType>
+
+    <simpleType name="intSimple">
+        <restriction base="integer">
+            <minInclusive value="0"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="doubleSmsPrices">
+        <restriction base="double">
+            <minInclusive value="0"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="tarifPattern">
+        <restriction base="integer">
+            <pattern value="12|60"/>
+        </restriction>
+    </simpleType>
+</schema>

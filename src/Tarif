@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<tns:Tariff xmlns:tns="http://www.i.ua/Tariff"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.example.com/Mails TestXSD.xsd">
+    <Tarif1>
+        <name>Light</name>
+        <operator>Life</operator>
+        <payrol>50</payrol>
+        <callPrices>
+            <inside>10</inside>
+            <outside>1</outside>
+            <stationarNumber>120</stationarNumber>
+        </callPrices>
+        <sms>1.5</sms>
+        <parameters>
+            <favourite>100</favourite>
+            <tarification>12</tarification>
+            <connection>1</connection>
+        </parameters>
+    </Tarif1>
+    <Tarif1>
+        <name>Weight</name>
+        <operator>Kyivstar</operator>
+        <payrol>100</payrol>
+        <callPrices>
+            <inside>111</inside>
+            <outside>11</outside>
+            <stationarNumber>222</stationarNumber>
+        </callPrices>
+        <sms>5.3</sms>
+        <parameters>
+            <favourite>1000</favourite>
+            <tarification>60</tarification>
+            <connection>55</connection>
+        </parameters>
+    </Tarif1>
+    <Tarif1>
+        <name>Super</name>
+        <operator>MTS</operator>
+        <payrol>33</payrol>
+        <callPrices>
+            <inside>33</inside>
+            <outside>22</outside>
+            <stationarNumber>111</stationarNumber>
+        </callPrices>
+        <sms>0.3</sms>
+        <parameters>
+            <favourite>1000</favourite>
+            <tarification>60</tarification>
+            <connection>10</connection>
+        </parameters>
+    </Tarif1>
+</tns:Tariff>
